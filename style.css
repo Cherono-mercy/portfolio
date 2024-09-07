@@ -170,6 +170,19 @@ section {
     height: 400px;
     width: 400px;
     margin: auto 0;
+    overflow: hidden; /* Hide the overflowing part of the image */
+    border-radius: 50%; /* Make the container round */
+    justify-content: center; /* Center the image */
+    align-items: center; /* Center the image */
+}
+
+.section__pic-container img {
+    width: 85%; /* Reduce image size so that the background is visible */
+    height: 85%;
+    object-fit: cover; /* Cover the container while maintaining aspect ratio */
+    border-radius: 50%; /* Make the image round */
+    object-position: 50% 20%; /* Adjust position: 50% horizontally, 20% vertically */
+    filter: grayscale(100%); /* Make the image black and white */
 }
 
 .section__text{
@@ -251,3 +264,64 @@ section {
 .btn-container {
     gap: 1rem;
 }
+
+/* ABOUT SECTION */
+#about {
+    position: relative;
+}
+
+.about-containers {
+    gap: 2rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.about-details-container {
+    justify-content: center;
+    flex-direction: column;
+}
+
+.about-containers, .about-details-container {
+    display: flex;
+}
+
+.arrow {
+    position: absolute;
+    right: -5rem;
+    bottom: 2.5rem;
+}
+
+.details-container {
+    padding: 1.5rem;
+    flex: 1;
+    background: white;
+    border-radius: 2rem;
+    border: rgb(53, 53, 53) 0.1rem solid;
+    border-color: rgb(163, 163, 163);
+    text-align: center;
+}
+
+.section-container {
+    gap: 4rem;
+    height: 80%;
+}
+
+/* Pic Container */
+.about__pic-container {
+    display: flex;
+    width: 950px;  /* Set the desired width */
+    height: 400px; /* Set the desired height */
+    margin: auto;
+    overflow: hidden;  /* Hide overflow outside the container */
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+}
+
+#about .about-pic {
+    width: 100%;    /* Full width of the container */
+    height: 100%;   /* Full height of the container */
+    object-fit: cover;  /* Cover the container without distortion */
+   
+}
+
